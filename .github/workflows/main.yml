@@ -21,9 +21,11 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # مسح أي إعدادات تالفة والبدء من جديد
-          rm -rf .buildozer
+          # قبول التراخيص يدوياً قبل البدء
+          mkdir -p ~/.android && touch ~/.android/repositories.cfg
           yes | buildozer android debug
+        env:
+          ACCEPT_SDK_LICENSE: "True"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
