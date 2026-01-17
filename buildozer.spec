@@ -1,19 +1,18 @@
+
 [app]
-title = Super HS Injector
-package.name = superinjector
+title = My Injector
+package.name = myinjector
 package.domain = org.test
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
 
-# المتطلبات الأساسية (مبسطة جداً لتفادي الخطأ 1)
 requirements = python3,kivy,pyjnius,android
 
-# الأذونات
 android.permissions = INTERNET, SYSTEM_ALERT_WINDOW, ACCESS_SUPERUSER
 
-# الإعدادات التقنية
-android.api = 33
+# الإعدادات التي تحل مشكلة 100
+android.api = 31
 android.minapi = 21
 android.ndk = 25b
 android.archs = arm64-v8a
