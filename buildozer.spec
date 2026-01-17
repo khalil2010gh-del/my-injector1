@@ -1,24 +1,29 @@
+
 [app]
-title = Ultra Injector HS
-package.name = ultrainjector
-package.domain = org.test
+title = Pro Injector HS
+package.name = proinjector
+package.domain = org.cheat
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
-requirements = python3,kivy==2.2.1,pyjnius,android,sdl2,sdl2_image,sdl2_ttf,sdl2_mixer
 
-# الأذونات الضرورية
+# المتطلبات الأساسية
+requirements = python3,kivy==2.2.1,pyjnius,android
+
+# الأذونات المطلوبة للحقن
 android.permissions = INTERNET, SYSTEM_ALERT_WINDOW, ACCESS_SUPERUSER
 
-# الإعدادات التقنية للنظام
+# إعدادات النظام (مهمة جداً لمنع خطأ 100)
 android.api = 31
 android.minapi = 21
 android.ndk = 25b
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 android.accept_sdk_license = True
+android.skip_setup_py = True
 
-# ظهور التطبيق بشكل عمودي
+# مظهر التطبيق
 orientation = portrait
+fullscreen = 0
 
 [buildozer]
 log_level = 2
